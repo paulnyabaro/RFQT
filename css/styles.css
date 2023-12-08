@@ -293,3 +293,67 @@ nav{
     color: var(--white);
     border: 1px solid var(--green);
 }
+.bg-light {
+    background-color: var(--light);
+}
+.py-3{
+    padding: 2rem 0;
+}
+.text-center{
+    text-align: center;
+}
+.g-0{
+    gap: 0;
+}
+.g-2{
+    gap: 1.5rem;
+}
+.mb-4{
+    margin-bottom: 3rem;
+}
+.vehicle-makes-card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    /* border-bottom: 1px dashed var(--green);
+    border-right: 1px dashed var(--green); */
+    box-shadow: 0 0 20px #0001;
+    background-color: var(--white);
+    border-radius: var(--br);
+    display: flex;
+    gap: 1rem;
+}
+/* .vehicle-makes-card:nth-child(6n){
+    border-right: none;
+}
+.vehicle-makes-card:nth-child(6n){
+    border-right: none;
+}
+.vehicle-makes-card:nth-child(n + 7){
+    border-bottom: none;
+} */
+.vehicle-makes-card .vmc-logo{
+    width: 4rem;
+}
+.vmc-content{
+    width: calc(100% - 5rem);
+}
+.vmc-content h3{
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+.vmc-content p{
+    font-weight: 400;
+    color: #888;
+}
+.vehicle-makes-card img{
+    width: 100%;
+    max-height: 50px;
+    object-fit: contain;
+}
+.mt-3{
+    margin-top: 2rem;
+}
