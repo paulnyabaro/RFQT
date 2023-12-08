@@ -611,6 +611,20 @@ h2{
 .text-end{
     text-align: right;
 }
+.list-unstyled{
+    list-style:none;
+    /* line-height: 2; */
+}
+.list-unstyled i{
+    font-size: 0.8rem;
+    color: var(--green);
+}
+.small{
+    font-size: 0.8rem;
+}
+.list-unstyled a{
+    color: var(--dark-blue);
+}
 
 
 footer{
@@ -622,8 +636,8 @@ footer h3{
     font-size: 1rem;
     text-transform: uppercase;
     position: relative;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
     width: max-content;
 }
 footer h3::before{
@@ -695,5 +709,7 @@ footer a:hover{
 }
 .copyright{
     background-color: var(--dark-blue);
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
