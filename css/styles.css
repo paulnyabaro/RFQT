@@ -348,6 +348,9 @@ h2{
 .g-2{
     gap: 1.5rem;
 }
+.g-4{
+    gap: 3rem;
+}
 .mb-2{
     margin-bottom: 1rem;
 }
@@ -419,6 +422,18 @@ h2{
 }
 .internal-link-card:hover img{
     transform: scale(1.125);
+}
+.internal-link-card:first-child{
+    border-top-left-radius: var(--br);
+}
+.internal-link-card:last-child{
+    border-bottom-right-radius: var(--br);
+}
+.internal-link-card:nth-child(4){
+    border-top-right-radius: var(--br);
+}
+.internal-link-card:nth-child(5){
+    border-bottom-left-radius: var(--br);
 }
 .ilc-img{
     display: block;
@@ -600,16 +615,66 @@ h2{
 
 footer{
     color: var(--light);
+    line-height: 2;
 }
 footer h3{
     color: var(--footer-heading);
-    font-size: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    width: max-content;
+}
+footer h3::before{
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--green), transparent);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+footer ul{
+    list-style: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 footer a{
     color: var(--footer-heading);
+    font-weight: 600;
+}
+footer a:hover{
+    color: var(--white);
 }
 .main-footer{
     background-color: var(--footer-bg);
+}
+.contact-flex{
+    display: flex;
+    gap:0.75rem;
+    margin-bottom: 0.75rem;
+}
+.contact-flex:last-of-type{
+    margin-bottom: 0;
+}
+.cf-icon{
+    color: var(--green);
+    width: 2rem;
+    font-size: 2rem;
+    line-height: 1.4;
+}
+.cf-content{
+    width: var(100% - 2.75rem);
+}
+.cf-content small{
+    font-size: 0.75rem;
+    line-height: 1;
+    color: #888;
+    display: block;
+}
+.cf-content span{
+    color: var(--white);
 }
 .footer-socials{
     display: flex;
@@ -619,14 +684,14 @@ footer a{
 .footer-socials a{
     height: 1.5rem;
     width: 1.5rem;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
     background-color: #fff2;
     border-radius: var(--br-sm);
-    line-height: 1;
+    line-height: 0;
 }
 .copyright{
     background-color: var(--dark-blue);
