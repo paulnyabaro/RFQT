@@ -400,6 +400,15 @@ h2{
     color: var(--white);
     border: 1px solid var(--green);
 }
+.btn-outline-green{
+    color: var(--green);
+    border: 1px solid var(--green);
+}
+.btn-dark-blue{
+    color: var(--white);
+    background-color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+}
 .bg-light {
     background-color: var(--light);
 }
@@ -417,6 +426,9 @@ h2{
 }
 .g-4{
     gap: 3rem;
+}
+.mb-1{
+    margin-bottom: 0.5rem;
 }
 .mb-2{
     margin-bottom: 1rem;
@@ -830,6 +842,20 @@ h2{
 }
 .mb-0{
     margin-bottom: 0;
+}
+.fancy-heading{
+    background-image: linear-gradient(to right, var(--green), var(--dark-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: max-content;
+    font-size: 1.5rem;
+}
+.frqt-services-card img{
+    width: 100%;
+    border-radius: var(--br);
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 
