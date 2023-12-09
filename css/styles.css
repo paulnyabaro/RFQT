@@ -230,7 +230,25 @@ h2{
 .lc-6{
     -webkit-line-clamp: 6;
 }
-
+.slider-popular-searches{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.slider-popular-searches li a{
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 0.25rem 1.5rem;
+    border-radius: 2rem;
+}
+.slider-popular-searches li a:hover{
+    background-color: var(--white);
+    color: var(--green);
+}
 .guarantee-card{
     display: flex;
     gap:0.75rem;
@@ -280,8 +298,8 @@ h2{
     content: '';
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right, var(--dark-blue), transparent);
-    opacity: 0.95;
+    background-image: linear-gradient(to right, var(--dark-blue) 50%, transparent);
+    opacity: 0.85;
     position: absolute;
     left: 0;
     top: 0;
@@ -344,7 +362,7 @@ h2{
     border-radius: var(--br);
     backdrop-filter: blur(5px);
     display: flex;
-    gap:0.5rem;
+    gap:1rem;
     align-items: center;
 }
 .hero-cards li .hc-icon{
@@ -901,3 +919,58 @@ footer a:hover{
     font-weight: 400;
 }
 
+@media screen and (max-width:999px) {
+    .top-nav-menu,.top-bar-menu{
+        display: none;
+    }
+    .container{
+        padding: 0 1rem;
+    }
+    .slider-popular-searches{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .slider-popular-searches li a{
+        font-size: 0.75rem;
+        width: 100%;
+        text-align: center;
+    }
+    .slider-popular-searches li:nth-child(4){
+        display: none;
+    }
+    .carousel-navs{
+        width: 100%;
+        left: 0;
+        z-index: 100;
+    }
+    .vehicle-list-card:not(:last-of-type){
+        display: none;
+    }
+    .vehicle-makes-card{
+        padding: 0.5rem 0;
+    }
+    .vehicle-makes-card .vmc-logo{
+        width: 2.5rem;
+    }
+    .vehicle-list-card .vmc-content{
+        width: calc(100% - 3rem);
+    }
+    .grid-6{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-5{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-4{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-3{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* .grid-2{
+        grid-template-columns: repeat(1, 1fr);
+    } */
+    .grid-sm-1{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
