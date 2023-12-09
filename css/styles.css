@@ -25,6 +25,10 @@ html{
 body{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 15px;
+    line-height: 1.8;
+}
+p:not(:last-of-type){
+    margin-bottom: 1rem;
 }
 a{
     text-decoration: none;
@@ -289,11 +293,11 @@ h2{
 }
 .hero-cards{
     list-style: none;
-    max-width: 80%;
+    max-width: 90%;
 }
 .hero-cards li{
-    padding: 0.5rem;
-    background-color: #fff6;
+    /* padding: 0.5rem; */
+    /* background-color: #0006; */
     border-radius: var(--br);
     backdrop-filter: blur(5px);
     display: flex;
@@ -306,6 +310,7 @@ h2{
     background-color: var(--green);
     color: var(--light);
     display: flex;
+    font-size: 1.5rem;
     border-radius: var(--br-sm);
     align-items: center;
     justify-content: center;
@@ -322,6 +327,7 @@ h2{
     outline: none;
     font-size: 1rem;
     font-weight: 600;
+    line-height: 1.2;
 }
 .btn-block{
     width: 100%;
@@ -380,6 +386,20 @@ h2{
     border-radius: var(--br);
     display: flex;
     gap: 1rem;
+}
+.vehicle-list-card{
+    height: 100%;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 0 20px #0001;
+    background-color: var(--white);
+    border-radius: var(--br);
+}
+.vehicle-list-card img{
+    width: 100%;
+}
+.vlc-image{
+    width: 100%;
 }
 /* .vehicle-makes-card:nth-child(6n){
     border-right: none;
@@ -460,6 +480,7 @@ h2{
     background-color: var(--green);
     border-radius: var(--br-sm);
     padding: 0.25rem 0.5rem;
+    line-height: 1.2;
 }
 .ilc-content-txt{
     position: absolute;
@@ -488,16 +509,17 @@ h2{
 }
 .testimonials::before{
     content: '';
-    background-color: var(--footer-bg);
+    background-color: #076a6a88;
     height: 100%;
     width: 100%;
     position: absolute;
+    backdrop-filter: blur(10px);
     left: 0;
     top: 0;
-    opacity: 0.7;
+    /* opacity: 0.5; */
 }
 .testimonial-card{
-    background-color: #fff4;
+    background-color: #0008;
     color: var(--white);
     padding: 1.5rem;
     border-radius: var(--br);
@@ -540,6 +562,9 @@ h2{
     font-size: 0.7rem;
     color: gold;
 }
+.position-relative{
+    position: relative;
+}
 .carousel{
     position: relative;
     padding-bottom: 3rem;
@@ -563,6 +588,32 @@ h2{
     border-top: 1px solid var(--white);
     border-right: 1px solid var(--white);
 }
+.carousel-navs{
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    transform: translateY(-50%);
+    align-items: center;
+    display: flex;
+    left: -1.5rem;
+    justify-content: space-between;
+    width: calc(100% + 3rem);
+}
+.carousel-left,.carousel-right{
+    height: 2rem;
+    width: 2rem;
+    box-shadow: 0 0 10px #0003;
+    /* position: absolute; */
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    color: var(--green);
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
 .carousel-pagination{
     position: absolute;
     left: 50%;
@@ -625,6 +676,39 @@ h2{
 .list-unstyled a{
     color: var(--dark-blue);
 }
+.tabs{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    border-bottom: 2px solid #0001;
+    justify-content: center;
+    width: 100%;
+    margin: -1rem 0 2rem;
+}
+.tabs li{
+    position: relative;
+    padding-bottom: 0.25rem;
+}
+.tabs li a{
+    font-weight: 500;
+    color: #888;
+}
+.tabs li.active a,.tabs li:hover a{
+    color: var(--green);
+}
+.tabs li::before{
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background-color: transparent;
+}
+.tabs li.active::before,.tabs li:hover::before{
+    background-color: var(--green);
+}
+
 
 
 footer{
