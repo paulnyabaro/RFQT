@@ -944,8 +944,28 @@ footer a:hover{
     font-size: 0.9rem;
     font-weight: 400;
 }
+.mobile-toggle-btn{
+    display: none;
+}
 
 @media screen and (max-width:999px) {
+    .hero-section{
+        padding: 1rem 0;
+    }
+    .hero-section{
+        background-image: linear-gradient(to right, var(--dark-blue), var(--dark-blue));
+    }
+    .hero-section h1{
+        font-size: 2rem;
+    }
+    .home-calc form{
+        width: 100%;
+        margin-top: 1.5rem;
+        max-width: unset;
+    }
+    .hero-section .grid-row{
+        gap: 0;
+    }
     .top-nav-menu,.top-bar-menu{
         display: none;
     }
@@ -969,7 +989,7 @@ footer a:hover{
         left: 0;
         z-index: 100;
     }
-    .vehicle-list-card:not(:last-of-type){
+    .vehicle-list-card:not(:last-of-type),.testimonial-card:not(:last-of-type){
         display: none;
     }
     .vehicle-makes-card{
@@ -980,6 +1000,33 @@ footer a:hover{
     }
     .vehicle-list-card .vmc-content{
         width: calc(100% - 3rem);
+    }
+    .vmc-content p{
+        font-size: 0.8rem;
+    }
+    .vmc-content h3{
+        font-size: 1rem;
+    }
+    .hero-cards li{
+        margin-top: 0.5rem;
+    }
+    .internal-link-card{
+        min-height: 200px;
+    }
+    .internal-link-card:first-child{
+        border-top-right-radius: var(--br);
+    }
+    .internal-link-card:last-child{
+        border-bottom-left-radius: var(--br);
+    }
+    .internal-link-card:nth-child(4){
+        border-top-right-radius: 0;
+    }
+    .internal-link-card:nth-child(5){
+        border-bottom-left-radius: 0;
+    }
+    .carousel::before, .carousel::after{
+        display: none;
     }
     .grid-6{
         grid-template-columns: repeat(1, 1fr);
@@ -993,10 +1040,28 @@ footer a:hover{
     .grid-3{
         grid-template-columns: repeat(1, 1fr);
     }
-    /* .grid-2{
-        grid-template-columns: repeat(1, 1fr);
-    } */
+    .grid-sm-2{
+        grid-template-columns: repeat(2, 1fr);
+    }
     .grid-sm-1{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .mobile-toggle-btn{
+        display: flex;
+        gap: 4px;
+        flex-direction: column;
+        margin-right: 1.5rem;
+    }
+    .mobile-toggle-btn .bar-1,.mobile-toggle-btn .bar-2{
+        display: block;
+        
+        background-color: var(--green);
+        height: 2px;
+    }
+    .mobile-toggle-btn .bar-1{
+        width: 1rem;
+    }
+    .mobile-toggle-btn .bar-2{
+        width: 1.5rem;
     }
 }
