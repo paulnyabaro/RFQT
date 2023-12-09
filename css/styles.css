@@ -944,7 +944,7 @@ footer a:hover{
     font-size: 0.9rem;
     font-weight: 400;
 }
-.mobile-toggle-btn{
+.mobile-toggle-btn,.mobile-navs{
     display: none;
 }
 
@@ -1048,7 +1048,7 @@ footer a:hover{
     }
     .mobile-toggle-btn{
         display: flex;
-        gap: 4px;
+        gap: 6px;
         flex-direction: column;
         margin-right: 1.5rem;
     }
@@ -1063,5 +1063,18 @@ footer a:hover{
     }
     .mobile-toggle-btn .bar-2{
         width: 1.5rem;
+    }
+    .top-nav-form{
+        width: 200px;
+        line-height: 1.3;
+        font-size: 0.9rem;
+    }
+    .mobile-navs{
+        display: flex;
+        gap: 1rem;
+        font-size: 1.25rem;
+    }
+    .mobile-navs a{
+        color: var(--dark-blue);
     }
 }
