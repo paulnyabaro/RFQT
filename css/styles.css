@@ -1110,4 +1110,13 @@ footer a:hover{
     .py-4{
         padding: 1.5rem 0;
     }
+    .sub-heading::before,.sub-heading::after{
+        width:5rem;
+    }
+    .sub-heading::before{
+        left:-5.5rem;
+    }
+    .sub-heading::after{
+        right:-5.5rem;
+    }
 }
